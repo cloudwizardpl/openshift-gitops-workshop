@@ -12,3 +12,12 @@ patches:
     kind: Deployment
     name: bgd
     version: v1
+- patch: |-
+    - op: add
+      path: /spec/tls/termination
+      value: edge
+  target:
+    group: route.openshift.io
+    kind: Route
+    name: bgd
+    version: v1
