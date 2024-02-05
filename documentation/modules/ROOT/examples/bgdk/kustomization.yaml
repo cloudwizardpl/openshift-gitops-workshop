@@ -14,8 +14,8 @@ patches:
     version: v1
 - patch: |-
     - op: add
-      path: /spec/tls/termination
-      value: edge
+      path: /spec/tls
+      value: {"termination": "edge"}
   target:
     group: route.openshift.io
     kind: Route
